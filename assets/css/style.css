@@ -1,0 +1,588 @@
+/*
+    SVS Living Interiors Website CSS
+    
+*/
+
+/* ----- 1. Global Styles */
+:root {
+    --primary-color: #6a5b51; 
+    --secondary-color: #3f3b38; 
+    --light-bg: #f7f3ed;
+    --text-color: #4a4a4a;
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: 'Roboto', sans-serif;
+     --logo-font: 'Abril Fatface', serif; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto; /* Center sections */
+}
+
+.section-title, h2 {
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+
+
+
+/* ----- 2. Navigation Bar ----- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+    font-family: var(--logo-font); 
+    font-size: 2.2rem; 
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+
+
+
+
+/* ----- 3. Page Sections ----- */
+
+/* Hero Section */
+#hero-section {
+    background-image: url('https://images.pexels.com/photos/3457292/pexels-photo-3457292.jpeg?_gl=1*5kgduy*_ga*MTA2NDAwNzIxOS4xNzU2OTIzMDQw*_ga_8JE65Q40S6');
+    background-size: cover;
+    border-radius: 4px;
+    background-position: center;
+    height: 85vh;
+    width: 100% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+}
+
+.hero-content h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+/* Home About Section */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+.about-image {
+    flex: 1;
+}
+.about-image img {
+    width: 90%;
+    height: 630px;
+    border-radius: 4px;
+}
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Home Service Showcase */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.service-item {
+    text-align: center;
+    width: 300px; /* Simple fixed width for cards */
+}
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.service-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+/* Generic Page Hero (for About, Services, Contact) */
+#page-hero-about, #page-hero-services, #page-hero-contact {
+    background-color: var(--light-bg);
+    height: 6vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.page-title {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+/* About Page Sections */
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+.info-text, .info-image {
+    flex: 1;
+}
+.info-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+.profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Services Page */
+.service-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.service-details img {
+    flex: 1;
+    width: 100%;
+    min-width: 250px; /* Ensures image isn't too small */
+    border-radius: 8px;
+}
+
+
+/* Contact Page */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Simple 2-column grid */
+    gap: 40px;
+}
+.contact-form-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.contact-details-container {
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.map-container img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+
+
+
+/* ----- 4. Footer ----- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* Revised Footer Styles */
+
+
+footer {
+    background-color: var(--secondary-color); /* The dark color from your palette */
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.footer-container {
+    display: flex; /* Aligns the inner sections side-by-side */
+    flex-wrap: wrap; /* Allows sections to wrap to the next line on small screens */
+    justify-content: space-between; /* Creates space between the two sections */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the content */
+    gap: 40px; /* Adds space between the columns */
+    text-align: left;
+}
+
+.footer-brand, .footer-contact {
+    /* This makes each column take up an equal amount of space */
+    flex: 1;
+    min-width: 250px; /* Prevents columns from getting too narrow on small screens */
+}
+
+.footer-brand .footer-logo {
+    font-family: var(--logo-font);
+    font-size: 2rem;
+    color: #fff;
+}
+
+.footer-brand .tagline {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-contact h4 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.map-link {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.map-link:hover {
+    background-color: #fff;
+    color: var(--secondary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+    opacity: 0.7;
+}
+
+
+
+
+/* ----- 5. Responsive Design ----- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 15px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .about-container, .info-container, .service-details, .contact-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-image, .info-image, .service-details img {
+        text-align: center;
+        width: 100%;
+    }
+    .service-details img {
+        min-width: auto;
+    }
+    .service-text {
+        text-align: center;
+    }
+    .section-title, .page-title, .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+/* 6. Portfolio Section Styles */
+
+
+/* This section sets the spacing and background color for the entire portfolio area. */
+#portfolio-section {
+    padding: 60px 20px; /* Adds 60 pixels of space to the top and bottom. */
+    background-color: var(--light-bg); /* Uses our light background color from the variables. */
+}
+
+
+.portfolio-carousel-container {
+    overflow: hidden; /* Hides any content that goes beyond its edges. */
+    white-space: nowrap; /* Keeps all the images on a single line. */
+    position: relative; /* This is important for the scroll animation. */
+    max-width: 100%; /* Makes sure the container doesn't get bigger than the screen. */
+}
+
+/* This is the main scrolling part. We're telling it to stay on one line. */
+.portfolio-carousel {
+    display: inline-block; /* Makes it act like a single line of text. */
+    
+    animation: scroll-portfolio 50s linear infinite;
+}
+
+/* Each of these is a single image box inside the carousel. */
+.portfolio-item {
+    display: inline-block;
+    width: 350px; /* Gives each image a fixed width. */
+    height: 300px; /* Gives each image a fixed height. */
+    margin: 0 10px; /* Adds 10 pixels of space between the image boxes. */
+    border-radius: 8px; /* Makes the corners slightly rounded. */
+    overflow: hidden; /* Hides any part of the image that goes outside this box. */
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth. */
+}
+
+/* This targets the actual image inside each image box. */
+.portfolio-item img {
+    width: 100%; /* Makes the image take up the full width of its box. */
+    height: 100%; /* Makes the image take up the full height of its box. */
+    object-fit: cover; /* This makes the image fill the box without being stretched. */
+    transition: transform 0.5s ease; /* A smooth transition for the zoom effect. */
+}
+
+/* This creates a subtle zoom-in effect when you move your mouse over an image. */
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Makes the image 5% bigger. */
+}
+
+/* This tells the animation to stop when a user hovers over the carousel. */
+.portfolio-carousel:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+/* 2. The Animation Itself */
+
+
+/* This is the most important part! It defines the scrolling movement. */
+@keyframes scroll-portfolio {
+    /* 0%: At the start of the animation. */
+    0% {
+        transform: translateX(0); /* The images are in their normal position. */
+    }
+    /* 100%: At the end of the animation. */
+    100% {
+        transform: translateX(-100%); /* The images have moved left by their full width, creating a loop. */
+    }
+}
+
+
+
+
+
+/* Styles for About Us Page Additions */
+
+
+/* Our Projects Section on About Page */
+#our-projects-about {
+    padding: 60px 20px;
+}
+#our-projects-about .portfolio-carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    max-width: 100%;
+}
+#our-projects-about .portfolio-carousel {
+    display: inline-block;
+}
+#our-projects-about .portfolio-item {
+    display: inline-block;
+    width: 350px;
+    height: 300px;
+    margin: 0 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#our-projects-about .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Our Clients Review Section */
+#client-reviews {
+    text-align: center;
+}
+
+.reviews-container {
+    display: grid; /* Use a grid for a neat layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Creates 4 or more columns that fit the screen */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: left; /* Aligns text within the card */
+}
+
+.review-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.client-name {
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: right;
+    margin-top: 10px; 
+
+/* =================================== */
+/* Styles for 'Meet Our Team' Section */
+/* =================================== */
+
+#our-team{
+    padding: 60px 20px;
+}
+.team-container {
+    max-width: 100%; /* Limits the container's width on larger screens. */
+    margin: 0 auto;
+}
+.team-image-text {
+    /* We use Flexbox here to put the text and image side-by-side. */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to a new line on smaller screens. */
+    align-items: center; /* Vertically aligns the text and image in the middle. */
+    gap: 40px; /* Adds space between the text and the image. */
+}
+.team-text {
+    flex: 1; /* Allows this text block to take up half of the available space. */
+}
+.team-image-wrapper {
+    flex: 1; /* Allows this image block to take up the other half of the available space. */
+    text-align: center;
+}
+.team-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.team-image{
+    width: 100px;
+    height: auto;
+}
+
+/* --- Responsive styles for mobile devices --- */
+@media (max-width: 768px) {
+    .team-image-text {
+        /* On smaller screens, we change the direction to 'column' to stack the text and image on top of each other. */
+        flex-direction: column;
+        text-align: center;
+    }
+}
